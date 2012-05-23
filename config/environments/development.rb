@@ -29,5 +29,5 @@ GotomeetingExample::Application.configure do
   config.assets.debug = true
   
   # Specify your GoToMeeting API key for development
-  config.go_to_meeting_api_key = 'c7aa0e8f0cb2e592289d3b2e9c94a60e'
+  config.go_to_meeting_api_key = {insert-api-key-here}
 end
