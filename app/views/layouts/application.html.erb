@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GotomeetingExample</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <div class="container">
+	    	<a class="brand" href="/">GoToMeeting Example App</a>
+			<ul class="nav">
+				<li><%= link_to "Meetings", "/meetings" %></li>
+			</ul>
+			<ul class="nav pull-right">
+			</ul>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container">
+
+		<% if notice %><p class="alert alert-success"><%= notice %></p><% end %>
+		<% if alert %><p class="alert alert-error"><%= alert %></p><% end %>
+	
+		<%= yield %>
+		
+		<br/>
+		<hr>
+		
+		<footer>
+	      	<p class="center">&copy; GoToMeeting Example 2012</p>
+	    </footer>
+		
+		
+	</div>
+
+</body>
+</html>

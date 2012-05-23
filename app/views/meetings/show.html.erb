@@ -1,0 +1,21 @@
+<h2><%= @meeting.first['subject'] %> 
+<%= link_to "Edit", url_for(:controller => "meetings", :action => "edit", :id => @meeting.first['meetingId']), :class => "btn btn-primary"%>
+</h2>
+
+<dl class="dl-horizontal">
+	<dt>Created</dt><dd><%= @meeting.first['createTime'] %></dd>
+	<dt>Status</dt><dd><%= @meeting.first['status'] %></dd>
+	<dt>Subject</dt><dd><%= @meeting.first['subject'] %></dd>
+	<dt>Start Time</dt><dd><%= @meeting.first['startTime'] %></dd>
+	<dt>Conference Call Info</dt><dd><%= @meeting.first['conferenceCallInfo'] %></dd>
+	<dt>Password Required</dt><dd><%= @meeting.first['passwordRequired'] %></dd>
+	<dt>Meeting Type</dt><dd><%= @meeting.first['meetingType'] %></dd>
+	<dt>Max Participants</dt><dd><%= @meeting.first['maxParticipants'] %></dd>
+	<dt>End Time</dt><dd><%= @meeting.first['endTime'] %></dd>
+	<dt>Unique Meeting ID</td><dd><%= @meeting.first['uniqueMeetingId'] %></dd>
+	<dt>Meeting ID</dt><dd><%= @meeting.first['meetingId'] %></dd>
+</dl>
+
+<code>
+<%= debug(@meeting) %>
+</code>

@@ -1,0 +1,48 @@
+<div style="float:right">
+	<%= link_to "Schedule Meeting", "meetings/new", :class => "btn btn-primary" %>
+</div>
+
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#scheduled_meetings" data-toggle="tab">Scheduled Meetings</a></li>
+	  <li><a href="#past_meetings" data-toggle="tab">Past Meetings</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="scheduled_meetings" class="tab-pane active">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Meeting ID</th>
+						<th>Subject</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<% @scheduled_meetings.each do |meeting| %>
+				<tr>
+					<td><%= link_to meeting["meetingid"], edit_meeting_path(meeting["meetingid"]) %></td>
+					<td><%= meeting["subject"] %></td>
+					<td><%= meeting["startTime"] %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+		<div id="past_meetings" class="tab-pane">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Meeting ID</th>
+						<th>Subject</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<% @past_meetings.each do |meeting| %>
+				<tr>
+					<td><%= link_to meeting["meetingId"], meeting_path(meeting["meetingId"]) %></td>
+					<td><%= meeting["subject"] %></td>
+					<td><%= meeting["date"] %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
