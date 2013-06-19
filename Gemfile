@@ -7,7 +7,7 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 gem 'httparty'
-gem 'go_to_meeting', :git => 'git://github.com/nathanwfish/GoToMeeting.git'
+gem 'go_to_meeting', :github => 'citrixonline/GoToWebinar-Ruby'
 gem 'less-rails-bootstrap'
 gem 'simple_form'
 gem 'therubyracer'
